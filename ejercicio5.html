@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <script>
+        const usuarios = [
+            { id: 1, nombre: "Ana", edad: 23, ciudad: "Madrid" },
+            { id: 2, nombre: "Luis", edad: 31, ciudad: "Barcelona" },
+            { id: 3, nombre: "Marta", edad: 19, ciudad: "Sevilla" },
+        ];
+        const resumen = usuarios.map(
+            ({nombre, edad}) => ({nombre, edad})
+        );
+        console.log(resumen);
+    </script>
+</body>
+
+</html>

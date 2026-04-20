@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+    <script>
+        const productos = [
+            { nombre: "Manzana", precio: 1.2, stock: 50 },
+            { nombre: "Kiwi", precio: 0.8, stock: 0 },
+            { nombre: "Mango", precio: 2.5, stock: 12 },
+            { nombre: "Papaya", precio: 3.0, stock: 0 },
+            { nombre: "Naranja", precio: 0.6, stock: 30 },
+        ];
+        
+        const disponibles = productos.filter(
+            p => p.stock > 0
+        );
+
+        console.log(disponibles)
+    </script>
+</body>
+
+</html>

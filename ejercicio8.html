@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+
+<body>
+    <script>
+        const gastos = [
+            { concepto: "Pizza", categoria: "comida", importe: 12 },
+            { concepto: "Bus", categoria: "transporte", importe: 2.5 },
+            { concepto: "Sushi", categoria: "comida", importe: 18 },
+            { concepto: "Cine", categoria: "ocio", importe: 9 },
+            { concepto: "Taxi", categoria: "transporte", importe: 8 },
+            { concepto: "Concierto", categoria: "ocio", importe: 35 },
+        ];
+
+        const porCategoria = gastos.reduce(
+            (acumulador, gasto) => {
+                const { categoria, importe } = gasto
+                //si la categoria no existe, la inicializamos
+                if (!acumulador[categoria]) {
+                    acumulador[categoria] = 0
+                }
+                //sumamos el importe
+                acumulador[categoria] += importe
+                return acumulador
+            }
+            , {});
+
+        console.log(porCategoria);
+    </script>
+</body>
+
+</html>

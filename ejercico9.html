@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+
+<body>
+    <script>
+        const palabras = [
+            "hola", "mundo", "hola", "js", "mundo",
+            "hola", "filter", "js", "hola"
+        ];
+
+        const conteo = palabras.reduce(
+            (acumulador, palabra) => {
+                //si no existe, la inicializamos
+                if (!acumulador[palabra]) {
+                    acumulador[palabra] = 0
+                }
+
+                //sumamos 1
+                acumulador[palabra]++
+
+                return acumulador
+            }
+            , {});
+
+        console.log(conteo);
+    </script>
+</body>
+
+</html>

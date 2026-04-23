@@ -9,12 +9,7 @@
 
 <body>
     <script>
-        const nombres = [
-            "ana garcia",
-            "luis perez",
-            "marta lopez",
-            "carlos ruiz"
-        ];
+        const nombres = [ "ana garcia", "luis perez", "marta lopez", "carlos ruiz" ];
 
         // Resultado esperado: ["GARCIA, Ana", "PEREZ, Luis", ...]
         const formateados = nombres.map(
@@ -23,7 +18,7 @@
                 return `
                 ${apellido.toUpperCase()},
                 ${nombre.toLowerCase()}
-                `;
+                `
             }
         );
         console.log(formateados);
